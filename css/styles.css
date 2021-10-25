@@ -1,0 +1,521 @@
+/**JESSIE MALANGEN - final project**/
+/** Some color that are used in css styles are from canva
+https://www.canva.com/colors/color-wheel/**/
+
+/* I use :flex display instead of column and row command */
+
+/*font are import from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+/* I used root variable to edit or change the color easily */
+:root {
+	--lightblue:rgb(54, 42, 88);
+	--highlight:blueviolet;
+	--hovercolor:#ac5376;
+	--fontcolor1:#1e7ee1;
+	--white:white;
+}
+
+*::selection {
+	background: var(--highlight);
+}
+
+/* add transition to give effect when scrolling on smaller screen */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	transition: all .5s linear;
+}
+
+/******/
+
+nav ul li a:hover {
+	text-transform: uppercase;
+}
+nav ul li :active {
+	background-color: inherit;
+}
+
+/*Font size of the page html*/
+html {
+	font-size: 1.2em;
+}
+
+section {
+	padding: 0 7%;
+	padding-top: 11em;
+}
+
+.btn2 {
+	font-size: .8em;
+	padding: .5em 3em;
+	background: var(--lightblue);
+	margin-top: 1em;
+	cursor: pointer;
+	color: var(--white);
+}
+
+.btn2:hover {
+	background-color: var(--hovercolor);
+}
+
+/* header position is fixed - it wont move when scrolling down on page */
+header {
+	position: fixed;
+	background: #a2ffef;
+	box-shadow: var(--lightblue) 0 .1em;
+	width: 100%;
+}
+
+header .heading {
+	color: var(--fontcolor1);
+	padding: .5em;
+	font-size: 3em;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+header #dmenu {
+	cursor: pointer;
+	color: var(--lightblue);
+	font-size: 1em;
+	cursor: pointer;
+	display: none;
+}
+
+header .nav-bar ul{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	background: var(--lightblue);
+	padding: 1em;
+}
+
+header .nav-bar ul li {
+	margin-left: 0 1.5em;
+}
+
+/*Nav font color*/
+header .nav-bar ul li a {
+	font-size: 1em;
+	color: var(--fontcolor1);
+	padding: .3em;
+	text-align: center;
+}
+
+header .nav-bar ul li a:hover {
+	color: var(--hovercolor);
+}
+
+header .nav-bar ul li a:hover {
+	text-transform: uppercase;
+}
+
+.landing {
+	background:url(../images/Memory\ storage-amico.png);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 50em;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.image {
+	flex: 2 2 38em;
+}
+
+.image img {
+	width: 100%;
+}
+
+.image {
+	width: 100%;
+}
+
+.content {
+	flex: 2 2 38em;
+}
+.content h1 {
+	font-size: 1.5em;
+	padding-top: 3em;
+}
+
+.content p {
+	font-size: 1.5em;
+	padding: 1em 0;
+}
+
+.about {
+	background:url(../images/Memory/storage-amico.png);
+	/* min-height: 70em; */
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-bottom: 1.5em;
+}
+
+.aboutimg {
+	flex: 2 2 38em;
+	padding-top: -1em;
+}
+
+.aboutimg img {
+	width: 100%;
+	display: flex;
+}
+
+.aboutcontent {
+	flex: 2 2 38em;
+	padding-top: -1em;
+}
+.aboutcontent h1{
+	font-size: 2em;
+	padding-top: 2em;
+}
+
+.aboutcontent p {
+	font-size: 1.2em;
+	padding: 1em;
+}
+
+.services {
+	background:url(../images/Memory\ storage-amico.png);
+	min-height: 80em;
+	color: var(--fontcolor1);
+}
+
+.services .box-container {
+	min-height: 20em;
+	justify-content: space-around;
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.services .box-container .box {
+	background-color: var(--white);
+	margin: 1em;
+	padding: 1em;
+	width: 20em;
+	text-align: center;
+	box-shadow: 0 0 .5em;
+}
+
+.services .box-container .box i {
+	font-size: 3em;
+	padding: 1em;
+	color: var(--fontcolor1);
+}
+
+.plans {
+	background:url(../images/Memory\ storage-amico.png);
+	min-height: 50em;
+	color: var(--fontcolor1);
+}
+
+.plans .box-container {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+	padding: 2em 0;
+}
+
+.plans .box-container .bplans {
+	background-color: var(--white);
+	margin: .5em;
+	padding: 1.2em;
+	width: 20em;
+	text-align: center;
+	box-shadow: 0 0 .5em;
+	text-decoration: none;
+}
+
+.plans .box-container .bplans .title {
+	font-size: 2em;
+	color: var(--fontcolor1);
+	padding: .5em 0;
+}
+
+.plans .box-container .bplans .price {
+	background-color: var(--lightblue);
+	border-radius: 5em;
+	margin: 1em auto;
+	height: 10em;
+	width: 10em;
+	line-height: 10em;
+	text-align: center;
+}
+
+.plans .box-container .bplans .price span {
+	font-size: 1.5em;
+}
+
+.plans .box-container .bplans ul li {
+	color: var(--highlight);
+	list-style: none;
+	padding: 1em;
+}
+
+.contactus {
+	/* min-height: 50em; */
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.contactus form {
+	text-align: center;
+	flex: 1 1 20em;
+	padding:1.5em;
+	margin: 1em;
+	margin-top: 3em;
+	box-shadow: 0 0 .4em;
+}
+
+.contactus .content {
+	flex: 1 1 30em;
+	padding: 2em 1em;
+}
+
+.contactus form .fbox {
+	width: 100%;
+	color: var(--lightblue);
+	height: 3em;
+	border-bottom: .1em solid;
+	text-transform: none;
+	font-size: .5em;
+	margin: 1em 0;
+}
+
+.contactus form .fbox1 {
+	min-height: 20em;
+	width: 100%;
+	color: var(--lightblue);
+	height: 3em;
+	border-bottom: .1em solid;
+	text-transform: none;
+	font-size: .5em;
+	margin: 1em 0;
+}
+
+.contactus form .fbox:placeholder{
+	text-transform: capitalize;
+}
+
+.contactus form .fbox:focus{
+	border-color: var(--highlight);
+}
+
+.contactus .content h3{
+    font-size: 2em;
+}
+
+.contactus .content p{
+    font-size: 1em;
+    padding:1em 0;
+}
+
+.contactus .content .icons{
+    font-size: 1.5eem;
+    padding:.7em 0;
+}
+
+.contactus .content .icons i{
+    padding-right: .5rem;
+}
+
+
+/* footer */
+.footer{
+    background: var(--lightblue);
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:2rem;
+    flex:1 1 20em;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+.footer .box-container .box p {
+    font-size: 1em;
+    color: var(--white);
+    padding: 1em 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1em;
+    color: var(--white);
+    padding: .2em 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+.footer .box-container form{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container form input[type="email"]{
+    height: 3em;
+    width:100%;
+    font-size: .9em;
+    padding:0 1em;
+}
+
+.footer .box-container form .btn{
+    margin-top: 0;
+}
+
+.footer .box-container form .btn:hover{
+    color: var(--lightblue);
+    background: var(--white)
+}
+
+.footer .credit{
+    font-size: 1em;
+    background: var(--lightblue);
+    text-align: center;
+    color:var(--white);
+    padding:1em 1em;
+    font-weight: normal;
+}
+
+.footer .credit a{
+    color: var(--fontcolor1);
+}
+
+.web {
+	text-align: center;
+	padding-top: 1em;
+	background-color: var(--white);
+}
+
+
+
+
+
+
+
+/*************************/
+/*Start of Media Query*/
+@media only screen and (max-width:768px) {
+
+	html {
+		font-size: 70%;
+	}
+
+	.content {
+		text-align: center;
+	}
+
+	.content h1 {
+		font-size: 2em;
+	}
+
+	.aboutcontent {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width:500px) {
+
+	html {
+	font-size: 70%;
+}
+
+/**using flexbox instead of float element on header @mobile**/
+		header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0;
+			}
+
+			header .heading {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+		header #dmenu {
+			display: block;
+		}
+		#dmenu .fas fa-bars{
+			color: var(--white);
+		}
+		
+		header .nav-bar {
+			position: fixed;
+			top: 6.5em;
+			right: -120%;
+			height: 100%;
+			width:100%;
+			border-top: .5em solid #a2ffef;
+		}
+		header .nav-bar ul{
+			padding-bottom: 15em;
+			flex-flow: column;
+			height: 100%;
+			width: 100%;
+			padding-bottom: 15em;
+		}
+
+		header .nav-bar ul li {
+			width: 100%;
+			text-align: center;
+			margin: .5em 0;
+		}
+
+		header .nav-bar ul li a {
+			font-size: 2em;
+			display: block;
+		}
+
+		header .nav-bar ul li a:hover {
+			color: var(--hovercolor);
+		}
+
+		.fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .nav-bar.nav-toggle{
+        right: 0%;
+    }
+
+	section{
+		padding-top: 3em;
+	}
+
+	.aboutcontent {
+		font-size: 1em;
+	}
+}
